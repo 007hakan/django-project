@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark my-4">
+	<a class="navbar-brand" href="/satici/about">About App</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_icerik" >
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbar_icerik">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+			</li><!-- 
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+					Açılır Menü
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Alt Menü 1</a>
+					<a class="dropdown-item" href="#">Alt Menü 2</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Ayrılmış Alt Menü </a>
+				</div>
+			</li> 
+			<li class="nav-item">
+				<a class="nav-link" href="#">İletişim</a>
+			</li> -->
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+      {% if request.user.is_authenticated %}
+        <a class="nav-link" href="/user/logout">Log Out</a>
+        <a class="nav-link" href="/satici/urunler">Details</a>
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      {% else %}
+        <a class="nav-link" href="/user/login">Log In</a>
+        <a class="nav-link" href="/user/register">Register</a>
+      {% endif %}
+        
+		</form>
+	</div>
+</nav>	

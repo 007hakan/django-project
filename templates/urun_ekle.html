@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form action="{% url 'urun_ekle' %}" method="post">
+{% csrf_token %}
+<label for="header">Header</label><br>
+<input type="text" name="header" id="header"><br><br>
+<label for="text">Text</label><br>
+<input type="text" name="text" id="text"><br><br>
+<input type="submit" value="Urun Ekle">
+
+</form>
+    
+{% endblock %}
+    

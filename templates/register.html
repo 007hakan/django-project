@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    <H1>Kayit Olalim artik</H1>
+    <hr >
+    <label title="text" >
+    <br>
+    <hr>
+    <form method= 'post'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <br>
+        <button type = 'submit' class="btn btn-success active">Register</button>
+    </form>
+{% endblock body %}

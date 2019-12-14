@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{%block body %}
+<ul>
+    {% for satici in saticis %}
+    <li>
+        <a href="satici/urunler/{{satici.id}}">{{satici.header}}</a>
+    </li>      
+    {% endfor %}
+</ul>
+
+ 
+    {% block content %}
+    <a href="/urun_ekle" >Urun Ekle</a>    
+    {% endblock content %}
+{%endblock body %}
+

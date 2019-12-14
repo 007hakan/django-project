@@ -1,0 +1,29 @@
+li a {
+    color: red;
+    font-family: courier;
+    font-size: 160%;
+    
+}
+p   {
+    color: antiquewhite;
+}
+h1  {
+    color: aquamarine;
+    text-decoration: underline;
+}
+hr  {
+    color: deepskyblue;
+}
+
+body {
+    background:white url("images/paper.jpg") no-repeat fixed;
+    height: 650px;
+    padding: 100px 0 0 0;
+    background-size: cover; 
+}
+
+.vl {
+    border-left: 6px solid green;
+    border-right: 6px solid green;
+    height: 600px;
+  }

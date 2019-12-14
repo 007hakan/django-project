@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{%block body %}
+  <a style="text-align:center;"href="/">Go Back</a>
+
+  <h3 style="font-family:verdana;font-size:160%;text-align:center;color:red;">{{satici.header}}</h3>
+  <h4 style="font-family:verdana;font-size:100%;text-align:center;color:rgb(26, 230, 145);">{{satici.text}}</h4>
+  <h5 style="font-family:verdana;font-size:160%;text-align:center;color:rgba(65, 17, 17, 0.836);">{{satici.created_date}}</h5>
+  <form action="{% url 'urun_sil' satici.id %}" method="post">
+      {% csrf_token %}
+      <input type="submit" value="URUN SIL">
+  </form>
+
+{%endblock%}
